@@ -1,4 +1,5 @@
 ﻿using MapLibrary.DAL;
+using MapLibrary.DAL.Events;
 using MapLibrary.Service;
 using MapLibrary.Utils;
 using StackExchange.Redis;
@@ -8,15 +9,18 @@ namespace MapLibrary.Infrastructure
 {
     public class ObjectLayer(IEventPublisher eventPublisher, 
         IDatabase redis, 
-        IСoordinateConverter cordinateConverter, 
+        IСoordinateConverter coordinateConverter, 
         JsonSerializerOptions options) : IStorage<DAL.Entities.Object>
     {
         public async Task AddAsync(DAL.Entities.Object obj)
         {
             var serObj = JsonSerializer.Serialize(obj, options);
-            
-            var 
-            await redis.GeoAddAsync()
+
+            var geoCoordinate = coordinateConverter.ToGeoCoords(obj.Coordinate);
+
+            await redis.GeoAddAsync(obj.Id, geoCoordinate.Longitude, geoCoordinate.Longitude, serObj);
+
+            await eventPublisher.Publish(new ObjectAdded(obj));
         }
 
         public Task<DAL.Entities.Object?> GetByCoordinateAsync(Сoordinate coord)

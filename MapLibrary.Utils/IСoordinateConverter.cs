@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MapLibrary.DAL;
 
 namespace MapLibrary.Utils
 {
     public interface IСoordinateConverter
     {
-        GeoCoordinate ToGeoCoords(Coordinate coordinate);
+        GeoCoordinate ToGeoCoords(Сoordinate coordinate);
     }
 }
