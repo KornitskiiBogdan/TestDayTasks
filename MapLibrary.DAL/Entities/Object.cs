@@ -6,7 +6,7 @@ public class Object
 
     public int Width { get; set; }
 
-    public Coordinate Coordinate { get; set; }
+    public Cordinate Coordinate { get; set; }
 
     public int Height { get; set; }
 }

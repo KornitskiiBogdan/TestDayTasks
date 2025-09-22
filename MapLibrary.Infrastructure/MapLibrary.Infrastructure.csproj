@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MapLibrary\MapLibrary.Service.csproj" />
+  </ItemGroup>
+
 </Project>
