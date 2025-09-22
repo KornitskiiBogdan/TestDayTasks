@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace MapLibrary.Utils
 {
-    public interface IСoordinateConverter
+    public struct GeoCoordinate
     {
-        GeoCoordinate ToGeoCoords(Coordinate coordinate);
+        public double Longitude { get; set; }
+
+        public double Latitude { get; set; }
     }
 }

@@ -11,10 +11,12 @@ namespace MapLibrary.Infrastructure
         IСoordinateConverter cordinateConverter, 
         JsonSerializerOptions options) : IStorage<DAL.Entities.Object>
     {
-        public Task AddAsync(DAL.Entities.Object obj)
+        public async Task AddAsync(DAL.Entities.Object obj)
         {
             var serObj = JsonSerializer.Serialize(obj, options);
-            throw new NotImplementedException();
+            
+            var 
+            await redis.GeoAddAsync()
         }
 
         public Task<DAL.Entities.Object?> GetByCoordinateAsync(Сoordinate coord)
