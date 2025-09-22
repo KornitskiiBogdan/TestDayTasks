@@ -2,8 +2,8 @@
 
 public class Area
 {
-    public Cordinate TopLeft { get; }
-    public Cordinate BottomRight { get; }
+    public Сoordinate TopLeft { get; }
+    public Сoordinate BottomRight { get; }
 }
 
 

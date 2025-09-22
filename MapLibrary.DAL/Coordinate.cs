@@ -1,5 +1,5 @@
 ﻿namespace MapLibrary.DAL;
-public class Cordinate
+public class Сoordinate
 {
     public int X { get; set; }
 

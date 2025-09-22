@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapLibrary.DAL", "MapLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapLibrary.Infrastructure", "MapLibrary.Infrastructure\MapLibrary.Infrastructure.csproj", "{2744527A-BC13-4E52-8A5A-20663470153A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapLibrary.Utils", "MapLibrary.Utils\MapLibrary.Utils.csproj", "{07AA0A9E-53F1-41DB-AEEF-A8997086C944}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2744527A-BC13-4E52-8A5A-20663470153A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2744527A-BC13-4E52-8A5A-20663470153A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2744527A-BC13-4E52-8A5A-20663470153A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07AA0A9E-53F1-41DB-AEEF-A8997086C944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AA0A9E-53F1-41DB-AEEF-A8997086C944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AA0A9E-53F1-41DB-AEEF-A8997086C944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AA0A9E-53F1-41DB-AEEF-A8997086C944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

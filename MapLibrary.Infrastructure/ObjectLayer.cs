@@ -1,22 +1,28 @@
 ﻿using MapLibrary.DAL;
-using MapLibrary.DAL.Entities;
 using MapLibrary.Service;
+using MapLibrary.Utils;
+using StackExchange.Redis;
+using System.Text.Json;
 
 namespace MapLibrary.Infrastructure
 {
-    public class ObjectLayer : IStorage<Object>
+    public class ObjectLayer(IEventPublisher eventPublisher, 
+        IDatabase redis, 
+        IСoordinateConverter cordinateConverter, 
+        JsonSerializerOptions options) : IStorage<DAL.Entities.Object>
     {
         public Task AddAsync(DAL.Entities.Object obj)
         {
+            var serObj = JsonSerializer.Serialize(obj, options);
             throw new NotImplementedException();
         }
 
-        public Task<DAL.Entities.Object?> GetByCoordinateAsync(Cordinate coord)
+        public Task<DAL.Entities.Object?> GetByCoordinateAsync(Сoordinate coord)
         {
             throw new NotImplementedException();
         }
 
-        public Task<DAL.Entities.Object?> GetByIdAsync(uint id)
+        public Task<DAL.Entities.Object?> GetByIdAsync(string id)
         {
             throw new NotImplementedException();
         }
@@ -26,7 +32,7 @@ namespace MapLibrary.Infrastructure
             throw new NotImplementedException();
         }
 
-        public Task<bool> RemoveAsync(uint id)
+        public Task<bool> RemoveAsync(string id)
         {
             throw new NotImplementedException();
         }
