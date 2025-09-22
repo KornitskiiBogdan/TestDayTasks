@@ -1,12 +1,4 @@
-using System;
-
-namespace ConsoleApp1;
-
-public interface IRedisStorage
-{
-    void GeoAdd<T>(string key, T value);
-}
-
+namespace MapLibrary.DAL;
 
 public class SurfaceLayer : LayerBase<SurfaceType>
 {

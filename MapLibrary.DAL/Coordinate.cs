@@ -1,5 +1,4 @@
-﻿namespace ConsoleApp1;
-
+﻿namespace MapLibrary.DAL;
 public class Coordinate
 {
     public int X { get; set; }

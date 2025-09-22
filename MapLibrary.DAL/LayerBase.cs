@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1;
+﻿namespace MapLibrary.DAL;
 
 public class LayerBase<T>
 {
