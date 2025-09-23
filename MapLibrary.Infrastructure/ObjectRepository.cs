@@ -7,7 +7,7 @@ using System.Text.Json;
 
 namespace MapLibrary.Infrastructure
 {
-    public class ObjectLayer(
+    public class ObjectRepository(
         IEventPublisher eventPublisher, 
         IDatabase redis, 
         IСoordinateConverter coordinateConverter, 

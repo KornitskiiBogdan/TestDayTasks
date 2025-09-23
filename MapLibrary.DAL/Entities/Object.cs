@@ -2,7 +2,7 @@
 
 public class Object
 {
-    public string Id { get; set; }
+    public uint Id { get; set; }
 
     public int Width { get; set; }
 
