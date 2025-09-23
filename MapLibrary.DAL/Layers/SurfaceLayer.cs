@@ -1,4 +1,4 @@
-namespace MapLibrary.DAL;
+namespace MapLibrary.DAL.Layers;
 
 public class SurfaceLayer : LayerBase<SurfaceType>
 {
